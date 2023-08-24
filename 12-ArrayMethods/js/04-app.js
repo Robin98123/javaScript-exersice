@@ -7,12 +7,27 @@ const carrito = [
     { nombre: 'Celular', precio: 700 },
 ]
 
+
+
+
 let resultado;
 
-resultado = carrito.filter(producto => producto.precio > 400);
-resultado =  carrito.filter(producto => producto.precio < 600);
-resultado =  carrito.filter(producto => producto.nombre !== 'Audifonos');
-resultado =  carrito.filter(producto => producto.nombre === 'Audifonos');
+carrito.forEach( (producto, index) =>{
+    if(producto.precio > 400 ){
+        console.log(`el producto ${index} cuesta mas de 400`)
+    }else if(producto.precio < 600){
+        console.log(`el producto ${index} cuesta menos de 600`)
+    }else if(producto.nombre !== 'Audifonos'){
+        console.log(`el producto ${nombre} ha sido eliminado del carrito`)
+    }else if(producto.nombre === 'Audifonos'){
+        console.log(`los otros productos menos ${nombre} han sido eliminados del carrito`)
+    }
+})
+
+// resultado = carrito.filter(producto => producto.precio > 400);
+// resultado =  carrito.filter(producto => producto.precio < 600);
+// resultado =  carrito.filter(producto => producto.nombre !== 'Audifonos');
+// resultado =  carrito.filter(producto => producto.nombre === 'Audifonos');
 
 
-console.log(resultado)
+// console.log(resultado)
